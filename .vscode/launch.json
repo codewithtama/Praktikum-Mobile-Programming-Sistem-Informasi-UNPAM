@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (lib\\pertemuan\\pertemuan_4\\tugas.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib\\pertemuan\\pertemuan_4\\tugas.dart"
+        }
+    ]
+}

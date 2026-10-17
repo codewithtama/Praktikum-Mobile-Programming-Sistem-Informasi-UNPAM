@@ -11,15 +11,23 @@ void main() {
     );
   }
 
-  testWidgets('TugasPertemuan6 renders all tabs correctly', (WidgetTester tester) async {
+  testWidgets('TugasPertemuan6 renders Form Pendaftaran Mahasiswa correctly', (WidgetTester tester) async {
+    tester.view.physicalSize = const Size(1200, 3200);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(() {
+      tester.view.resetPhysicalSize();
+      tester.view.resetDevicePixelRatio();
+    });
+
     await tester.pumpWidget(createWidgetUnderTest());
     await tester.pumpAndSettle();
 
-    expect(find.text('Pertemuan 6: Form Flutter'), findsOneWidget);
-    expect(find.text('Tugas Utama'), findsOneWidget);
-    expect(find.text('Latihan 1: Biodata'), findsOneWidget);
-    expect(find.text('Latihan 2: Registrasi'), findsOneWidget);
-    expect(find.text('Alur & Konsep'), findsOneWidget);
+    expect(find.text('Tugas 6: Form Pendaftaran'), findsOneWidget);
+    expect(find.text('Formulir Registrasi Mahasiswa Baru'), findsOneWidget);
+    expect(find.text('Nama Lengkap Mahasiswa *'), findsOneWidget);
+    expect(find.text('Nomor Induk Mahasiswa (NIM) *'), findsOneWidget);
+    expect(find.text('Email Kampus / Aktif *'), findsOneWidget);
+    expect(find.text('Nomor WhatsApp / HP *'), findsOneWidget);
   });
 
   testWidgets('TugasPertemuan6 can populate demo data and submit form', (WidgetTester tester) async {

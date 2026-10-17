@@ -140,10 +140,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     final quickStories = [
       {'title': 'Tugas 1', 'subtitle': 'Dasar', 'icon': LucideIcons.code, 'color': AppColors.info, 'target': const TugasPertemuan1()},
       {'title': 'Tugas 2', 'subtitle': 'Layout', 'icon': LucideIcons.layers, 'color': AppColors.secondary, 'target': const TugasPertemuan2()},
-      {'title': 'Tugas 3', 'subtitle': 'Kuliner', 'icon': LucideIcons.utensils, 'color': Colors.deepOrange, 'target': const TugasLayoutPertemuan3()},
+      {'title': 'Tugas 3', 'subtitle': 'Kuliner', 'icon': LucideIcons.utensils, 'color': AppColors.accent, 'target': const TugasLayoutPertemuan3()},
       {'title': 'Tugas 4', 'subtitle': 'Dialog', 'icon': LucideIcons.messageSquare, 'color': AppColors.primary, 'target': const TugasPertemuan4()},
-      {'title': 'Tugas 5', 'subtitle': 'Form', 'icon': LucideIcons.fileEdit, 'color': Colors.purple, 'target': const TugasPertemuan5()},
-      {'title': 'Tugas 6', 'subtitle': 'Daftar', 'icon': LucideIcons.fileSpreadsheet, 'color': Colors.indigo, 'target': const TugasPertemuan6()},
+      {'title': 'Tugas 5', 'subtitle': 'Form', 'icon': LucideIcons.fileEdit, 'color': AppColors.primaryLight, 'target': const TugasPertemuan5()},
+      {'title': 'Tugas 6', 'subtitle': 'Daftar', 'icon': LucideIcons.fileSpreadsheet, 'color': AppColors.primary, 'target': const TugasPertemuan6()},
     ];
 
     return Scaffold(
@@ -245,22 +245,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     padding: const EdgeInsets.all(AppSpacing.xl),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(AppRadius.xxl),
-                      gradient: const LinearGradient(
-                        colors: [
-                          Color(0xFF0F766E),
-                          Color(0xFF0D9488),
-                          Color(0xFF14B8A6),
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
+                      color: isDark ? AppColors.surfaceDark : const Color(0xFF0F172A),
+                      border: Border.all(
+                        color: isDark ? AppColors.borderDark : const Color(0xFF1E293B),
                       ),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x380F766E),
-                          blurRadius: 24,
-                          offset: Offset(0, 10),
-                        ),
-                      ],
+                      boxShadow: AppShadows.medium,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

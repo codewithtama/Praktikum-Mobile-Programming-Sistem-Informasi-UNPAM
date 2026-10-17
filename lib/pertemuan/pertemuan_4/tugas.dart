@@ -14,7 +14,7 @@ class TugasPertemuan4 extends StatelessWidget {
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 2,
-      backgroundColor: isSuccess ? const Color(0xFF0F766E) : const Color(0xFFEF4444),
+      backgroundColor: isSuccess ? AppColors.primary : AppColors.error,
       textColor: Colors.white,
       fontSize: 14.0,
     );
